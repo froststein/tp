@@ -246,12 +246,22 @@ Deletes an existing session so that you can remove sessions that you no longer n
 
 <br>
 
-> **💡 Note:**
->* A session with a unique identifier of `[SESSION_ID]` has to exist before it can be removed.
-> 
-> **⚠️ Warning:**
->* This action is irreversible. The session is deleted immediately after entering this command.
->* Additionally, all activities in the deleted session are deleted immediately as well.
+<div class = "notes box">
+<strong>💡 Notes:</strong>
+  <ul>
+    <li>A session with a unique identifier of <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code> has to exist before it can be removed.</li>
+  </ul>
+</div>
+
+<br>
+
+<div class = "warnings box">
+<strong>⚠️ Warning:</strong>
+<ul>
+  <li>This action is irreversible. The session is deleted immediately after entering this command.</li>
+  <li>Additionally, all activities in the deleted session are deleted immediately as well.</li>
+</ul>
+</div>
 
 <br>
 
@@ -292,29 +302,37 @@ delimiter is compulsory to identify the session you wish to edit.
 
 <br>
 
-> **💡 Notes:**
->* A session with a unique identifier of `[SESSION_ID]` has to exist before it can be edited.
-> The `[SESSION_NAME]` should be unique across all existing sessions.
->* Each name in `[NAME1 NAME2 ...]` for a particular session should be unique.
->* The names in `[NAME1 NAME2 ...]` must only be a single word without whitespaces.
->   * Example: `Alice Tan` is not allowed.
->* There are 3 editable fields: _session name_, _session date_ and the _list of participants_ in the session.
->   * At least 1 field has to be edited for the command to run.
->   * More than 1 field can be edited in a single run of the command.
->* When editing the _list of participants_, existing participants, including those part of the group declared when
->  creating the session, must be included.
->   * Activities may have been created using participants in the list, hence the _list of participants_ can only expand
->     and not shrink. This is to prevent introducing any inconsistencies to activities in the session.
->   * Example 1: If the session with session unique identifier of _1_ has been created with _Alice_ and _Bob_ 
->     and you wish to edit it to include _Charlie_, a valid edit command would be:<br>
->     `session /edit /sid 1 /pl Alice Bob Charlie`.
->   * Example 2: If the session with session unique identifier of _1_ has been created with
->     _Alice_ and a group consisting of _Bob_ and _Charlie_, and you wish to edit it to include _Mike_,
->     a valid edit command would be: <br>
->     `session /edit /sid 1 /pl Alice Bob Charlie Mike`.
-> 
-> **⚠️ Warning:**
->* This action is irreversible. The session is edited immediately after entering this command.
+<div class = "notes box">
+<strong>💡 Notes:</strong>
+  <ul>
+    <li>A session with a unique identifier of <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code> has to exist before it can be edited. The <code class="language-plaintext highlighter-rouge">[SESSION_NAME]</code> should be unique across all existing sessions.</li>
+    <li>Each name in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> for a particular session should be unique.</li>
+    <li>The names in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> must only be a single word without whitespaces.</li>
+      <ul>
+        <li>Example: <code class="language-plaintext highlighter-rouge">Alice Tan</code> is not allowed.</li>
+      </ul>
+    <li>There are 3 editable fields: <em>session name</em>, <em>session date</em> and the <em>list of participants</em> in the session.</li>
+      <ul>
+        <li>At least 1 field has to be edited for the command to run.</li>
+        <li>More than 1 field can be edited in a single run of the command.</li>
+      </ul>
+    <li>When editing the _list of participants_, existing participants, including those part of the group declared when creating the session, must be included.</li>
+    <ul>
+        <li>Activities may have been created using participants in the list, hence the <em>list of participants</em>  can only expand and not shrink. This is to prevent introducing any inconsistencies to activities in the session.</li>
+        <li>Example 1: If the session with session unique identifier of <em>1</em> has been created with <em>Alice</em>  and <em>Bob</em>  and you wish to edit it to include <em>Charlie</em> , a valid edit command would be: <br> <code class="language-plaintext highlighter-rouge">session /edit /sid 1 /pl Alice Bob Charlie</code>.</li>
+        <li>Example 2: If the session with session unique identifier of <em>1</em> has been created with <em>Alice</em>  and a group consisting of <em>Bob</em>  and <em>Charlie</em> , and you wish to edit it to include <em>Mike</em> , a valid edit command would be: <br> <code class="language-plaintext highlighter-rouge">session /edit /sid 1 /pl Alice Bob Charlie Mike</code>.</li>
+      </ul>
+  </ul>
+</div>
+
+<br>
+
+<div class = "warnings box">
+<strong>⚠️ Warning:</strong>
+<ul>
+  <li>This action is irreversible. The session is edited immediately after entering this command.</li>
+</ul>
+</div>
 
 <br>
 
@@ -379,8 +397,12 @@ Displays the details of an existing session so that you can review it.<br>
 
 <br>
 
-> **💡 Note:**
->* The session with a unique identifier of `[SESSION_ID]` has to exist before the session can be viewed.
+<div class = "notes box">
+<strong>💡 Notes:</strong>
+  <ul>
+    <li>The session with a unique identifier of  <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code> has to exist before the session can be viewed.</li>
+  </ul>
+</div>
 
 <br>
 
