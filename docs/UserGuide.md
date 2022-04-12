@@ -156,6 +156,7 @@ Creates a session so that you can manage your group outings. <br>
  
 <br>
 
+<!--
 >  **💡 Notes:**
 >* The `[SESSION_NAME]` should be unique across all existing sessions.
 >* Each name in `[NAME1 NAME2 ...]` for a particular session should be unique.
@@ -167,14 +168,38 @@ Creates a session so that you can manage your group outings. <br>
    `[GROUP_ID]`, only one instance of this individual is stored in the session.
 >   * Example: Where the group specified by `/gid` consists of _Alice_ and _Bob_ and the arguments of `/pl` 
       includes _Alice_, only two names, _Alice_ and _Bob_, would be saved.
+-->
+
+<span class = "notes box">
+<h5>💡 Notes:</h5>
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">[SESSION_NAME]</code> should be unique across all existing sessions.</li>
+  <li>Each name in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> for a particular session should be unique.</li>
+  <li>The names in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> must only be a single word without whitespaces.</li>
+  <ul>
+    <li>Example: <code class="language-plaintext highlighter-rouge">Alice Tan</code> is not allowed.</li>
+  </ul>
+</ul>
+</span>
+<br>
+<span class = "warning box">
+<h5>⚠️ Warning:</h5>
+<ul>
+<li>If you include a name of an individual in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> who already exists in the group specified by <code class="language-plaintext highlighter-rouge">[GROUP_ID]</code>, only one instance of this individual is stored in the session.</li>
+  <ul>
+    <li>Example: Where the group specified by <code class="language-plaintext highlighter-rouge">/gid</code> consists of _Alice_ and _Bob_ and the arguments of <code class="language-plaintext highlighter-rouge">/pl</code> includes _Alice_, only two names, _Alice_ and _Bob_, would be saved.</li>
+  </ul>
+</ul>
+</span>
+
 
 <br>
 
 **Example 1** 
-* Adds a new session named _Class Outing_ involving _Alice_ and _Bob_ on _15-03-2022_.<br><br>
+* Adds a new session named _Class Outing_ involving _Alice_ and _Bob_ on _15-03-2022_.<br>
   <!--`session /create /n Class Outing /d 15-03-2022 /pl Alice Bob` <br>
-  ![Session create command Screenshot 1](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/SessionCreateCommand[1].png)
-  -->
+  ![Session create command Screenshot 1](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/SessionCreateCommand[1].png)-->
+  
   ```
   > session /create /n Class outing /d 15-03-2022 /pl Alice Bob 
   The session was created successfully.
@@ -198,7 +223,7 @@ Creates a session so that you can manage your group outings. <br>
   ```
   > session /create /n Class outing /d 15-03-2022 /pl Alice Bob 
   The session was created successfully.
-  Session Id #4 --
+  Session Id #2 --
   Name: Class Gathering
   Date: 16-04-2022
   Group: Uni Friends
