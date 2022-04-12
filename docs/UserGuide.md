@@ -181,7 +181,9 @@ Creates a session so that you can manage your group outings. <br>
   </ul>
 </ul>
 </span>
+
 <br>
+
 <span class = "warning box">
 <h5>⚠️ Warning:</h5>
 <ul>
