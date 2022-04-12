@@ -255,7 +255,7 @@ Deletes an existing session so that you can remove sessions that you no longer n
 
 <br>
 
-<div class = "warnings box">
+<div class = "warning box">
 <strong>⚠️ Warning:</strong>
 <ul>
   <li>This action is irreversible. The session is deleted immediately after entering this command.</li>
@@ -327,7 +327,7 @@ delimiter is compulsory to identify the session you wish to edit.
 
 <br>
 
-<div class = "warnings box">
+<div class = "warning box">
 <strong>⚠️ Warning:</strong>
 <ul>
   <li>This action is irreversible. The session is edited immediately after entering this command.</li>
