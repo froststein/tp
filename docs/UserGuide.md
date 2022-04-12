@@ -156,20 +156,6 @@ Creates a session so that you can manage your group outings. <br>
  
 <br>
 
-<!--
->  **💡 Notes:**
->* The `[SESSION_NAME]` should be unique across all existing sessions.
->* Each name in `[NAME1 NAME2 ...]` for a particular session should be unique.
->* The names in `[NAME1 NAME2 ...]` must only be a single word without whitespaces.
->   * Example: `Alice Tan` is not allowed.
-> 
-> **⚠️ Warning:**
->* If you include a name of an individual in `[NAME1 NAME2 ...]` who already exists in the group specified by
-   `[GROUP_ID]`, only one instance of this individual is stored in the session.
->   * Example: Where the group specified by `/gid` consists of _Alice_ and _Bob_ and the arguments of `/pl` 
-      includes _Alice_, only two names, _Alice_ and _Bob_, would be saved.
--->
-
 <div class = "notes box">
 <strong>💡 Notes:</strong>
 <ul>
@@ -199,9 +185,7 @@ Creates a session so that you can manage your group outings. <br>
 
 **Example 1** 
 * Adds a new session named _Class Outing_ involving _Alice_ and _Bob_ on _15-03-2022_.<br>
-  <!--`session /create /n Class Outing /d 15-03-2022 /pl Alice Bob` <br>
-  ![Session create command Screenshot 1](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/SessionCreateCommand[1].png)-->
-  
+  `session /create /n Class Outing /d 15-03-2022 /pl Alice Bob` <br>
   ```
   > session /create /n Class outing /d 15-03-2022 /pl Alice Bob 
   The session was created successfully.
@@ -219,11 +203,9 @@ Creates a session so that you can manage your group outings. <br>
 **Example 2** 
 * A [group has been created](#creating-a-group-group-create) with group named _Uni Friends_ with _Sally, Emily, David, Uriel, Natalie, Daniel, Nathan, Ethan_ and _Sam_. <br>
   Adds a new session named _Class Gathering_ consisting of a group named _Uni Friends_ and _Alice_, on _16-04-2022_.<br>
-  <!--`session /create /n Class Gathering /d 16-04-2022 /gid 1 /pl Alice` <br>
-  ![Session create command Screenshot 2](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/SessionCreateCommand[2].png)-->
-
+  `session /create /n Class Gathering /d 16-04-2022 /gid 1 /pl Alice`
   ```
-  > session /create /n Class outing /d 15-03-2022 /pl Alice Bob 
+  > session /create /n Class Gathering /d 16-04-2022 /gid 1 /pl Alice
   The session was created successfully.
   Session Id #2 --
   Name: Class Gathering
@@ -273,8 +255,13 @@ Deletes an existing session so that you can remove sessions that you no longer n
 
 **Example** 
 * Removes an existing session with a unique identifier of _2_.<br><br>
-  `session /delete /sid 2` <br><br>
-  ![Session delete command Screenshot](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/SessionDeleteCommand.png)
+  `session /delete /sid 2` <br>
+  ```
+  > session /delete /sid 2
+  The session was deleted successfully.
+  ============================================================
+  ```
+
   <br>
   <br>
 
@@ -334,13 +321,40 @@ delimiter is compulsory to identify the session you wish to edit.
 
 **Example 1** 
 * Edits the name of the session to _Class gathering_ and the date to _16-03-2022_. <br><br>
-  `session /edit /sid 1 /n Class gathering /d 16-03-2022` <br><br>
-  ![Session Edit command Screenshot 1](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/SessionEditCommand[1].png)
+  `session /edit /sid 1 /n Class gathering /d 16-03-2022` <br>
+  ```
+  > session /edit /sid 1 /n Class gathering /d 16-03-2022
+  The session was edited successfully.
+  Session Id #1 --
+  Name: Class gathering
+  Date: 16-03-2022
+  Group: None
+  Participants:
+   1. Alice
+   2. Bob
+  The list of activities in the session is currently empty.
+  ============================================================
+  ```
+
 
 **Example 2** 
 * Edits the session to include _Charlie_. <br><br>
-  `session /edit /sid 1 /pl Alice Bob Charlie` <br><br>
-  ![Session Edit command Screenshot 2](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/SessionEditCommand[2].png)
+  `session /edit /sid 1 /pl Alice Bob Charlie` <br>
+  ```
+  > session /edit /sid 1 /pl Alice Bob Charlie
+  The session was edited successfully.
+  Session Id #1 --
+  Name: Class gathering
+  Date: 16-03-2022
+  Group: None
+  Participants:
+   1. Alice
+   2. Bob
+   3. Charlie
+  The list of activities in the session is currently empty.
+  ============================================================
+  ```
+
   <br>
   <br>
 
@@ -367,8 +381,21 @@ Displays the details of an existing session so that you can review it.<br>
 
 **Example**:
 * Views an existing session with a unique identifier of _1_.<br><br>
-  `session /view /sid 1` <br><br>
-  ![Session View command Screenshot](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/SessionViewCommand.png)
+  `session /view /sid 1` <br>
+  ```
+  > session /view /sid 1
+  Session Id #1 --
+  Name: Class gathering
+  Date: 16-03-2022
+  Group: None
+  Participants:
+   1. Alice
+   2. Bob
+   3. Charlie
+  The list of activities in the session is currently empty.
+  ============================================================
+  ```
+
   <br>     
   <br>
 
@@ -388,8 +415,17 @@ However, deleted sessions are not listed.
 
 **Example**
 * Lists all existing sessions. <br><br>
-  `session /list`<br><br>
-  ![Session list command Screenshot](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/SessionListCommand.png)
+  `session /list`<br>
+  ```
+  > session /list
+  List of Sessions
+  ----------------------------------------------------------------------
+  # | Name            | Date       | # of Participants | # of Activities 
+  ----------------------------------------------------------------------
+  1 | Class gathering | 16-03-2022 | 3                 | 0               
+  ======================================================================
+  ```  
+
   <br>
   <br>
 
@@ -472,14 +508,52 @@ There are 2 ways that you can specify the costs of an activity:
 **Example 1**
 * Adds a new activity to a session with a session unique identifier of _1_ named _Class Lunch_. Alice paid a total of _$10_
   for both Bob and herself which is split equally amongst them.<br><br>
-  `activity /create /sid 1 /n Class Lunch /p Alice /i Alice Bob /co 10` <br><br>
-  ![Activity create command [1] Screenshot](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/ActivityCreateCommand[1].png)
+  `activity /create /sid 1 /n Class Lunch /p Alice /i Alice Bob /co 10` <br>
+  ```
+  > activity /create /sid 1 /n Class Lunch /p Alice /i Alice Bob /co 10
+  The activity was created successfully.
+  Activity Id #1 --
+  Name:                     Class Lunch
+  Id:                       1
+  Payer:                    Alice
+  GST:                      0.00%
+  Service Charge(SC):       0.00%
+  Cost(GST & SC inclusive): $10.00
+  Involved: 
+  -----------------------
+  # | Name  | Cost Owed 
+  -----------------------
+  1 | Alice | $5.00     
+  2 | Bob   | $5.00     
+  =======================
+  > 
+  ```
+
+<br>
 
 **Example 2**
 * Adds a new activity to a session with a session unique identifier of _1_ named _High Tea_. Alice paid for both
   Bob and herself. Alice's meal cost _$20.50_ while Bob's meal cost _$13.50_.<br><br>
-  `activity /create /sid 1 /n High Tea /p Alice /i Alice Bob /cl 20.50 13.50` <br><br>
-  ![Activity create command [2] Screenshot](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/ActivityCreateCommand[2].png)
+  `activity /create /sid 1 /n High Tea /p Alice /i Alice Bob /cl 20.50 13.50` <br>
+  ```
+  > activity /create /sid 1 /n High Tea /p Alice /i Alice Bob /cl 20.50 13.50
+  The activity was created successfully.
+  Activity Id #2 --
+  Name:                     High Tea
+  Id:                       2
+  Payer:                    Alice
+  GST:                      0.00%
+  Service Charge(SC):       0.00%
+  Cost(GST & SC inclusive): $34.00
+  Involved: 
+  -----------------------
+  # | Name  | Cost Owed 
+  -----------------------
+  1 | Alice | $20.50    
+  2 | Bob   | $13.50    
+  =======================
+  ```
+  
   <br>
   <br>
 
@@ -512,10 +586,15 @@ Deletes an existing activity from a particular session so that you can remove ac
 
 **Example**:
 - Removes an existing activity with a unique identifier of _2_ from a session with a unique identifier of _1_. <br><br>
-  `activity /delete /sid 1 /aid 2` <br><br>
-  ![Activity delete command Screenshot](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/ActivityDeleteCommand.png)
-  <br>
-  <br>
+  `activity /delete /sid 1 /aid 2` <br>
+  ```
+  > activity /delete /sid 1 /aid 2
+  The activity was deleted successfully.
+  ============================================================
+  ```
+
+<br>
+<br>
 
 <div class="button-box">
   <a class="back-button" href="#activity-management">Back to Activity Management</a>
@@ -597,8 +676,26 @@ distributed amongst all participants.
 * Edits the name, payer, overall cost, GST percentage and service charge of an [activity that has been created](#creating-an-activity-activity-create)
   with an activity unique identifier of _1_ in a session with a session unique identifier of _1_, leaving the list of
   participants unchanged. The activity is currently named _Class Lunch_ and involves _Alice_ and _Bob_.<br><br>
-  `activity /edit /sid 1 /aid 1 /n Dinner /p Bob /i Alice Bob /co 30 /gst 7 /sc 10`<br><br>
-  ![Activity edit command Screenshot](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/ActivityEditCommand.png)
+  `activity /edit /sid 1 /aid 1 /n Dinner /p Bob /i Alice Bob /co 30 /gst 7 /sc 10`<br>
+  ```
+  > activity /edit /sid 1 /aid 1 /n Dinner /p Bob /i Alice Bob /co 30 /gst 7 /sc 10
+  The activity was edited successfully.
+  Activity Id #1 --
+  Name:                     Dinner
+  Id:                       1
+  Payer:                    Bob
+  GST:                      7.00%
+  Service Charge(SC):       10.00%
+  Cost(GST & SC inclusive): $35.31
+  Involved: 
+  -----------------------
+  # | Name  | Cost Owed 
+  -----------------------
+  1 | Alice | $17.66    
+  2 | Bob   | $17.66    
+  =======================
+  ```
+
   <br>
   <br>
 
@@ -629,8 +726,25 @@ Displays the details about an existing activity so that you can review it.<br>
 
 **Example**
 - Views an existing activity with a unique identifier of _1_ in a session with a session unique identifier of _1_.<br><br>
-  `activity /view /sid 1 /aid 1` <br><br>
-  ![Activity view command Screenshot](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/ActivityViewCommand.png)
+  `activity /view /sid 1 /aid 1` <br>
+  ```
+  > activity /view /sid 1 /aid 1
+  Session Id #1 | Activity Id #1 --
+  Name:                     Dinner
+  Id:                       1
+  Payer:                    Bob
+  GST:                      7.00%
+  Service Charge(SC):       10.00%
+  Cost(GST & SC inclusive): $35.31
+  Involved: 
+  -----------------------
+  # | Name  | Cost Owed 
+  -----------------------
+  1 | Alice | $17.66    
+  2 | Bob   | $17.66    
+  =======================
+  ```
+  
   <br>     
   <br>
 
@@ -658,9 +772,17 @@ However, deleted activities are not listed.
 
 **Example**:
 - Lists all activities in a session with a unique identifier of _1_.<br><br>
-  `activity /list /sid 1` <br><br>
-  ![Activity list command Screenshot](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/ActivityListCommand.png)
-  <br>     
+  `activity /list /sid 1` <br>
+  ```
+  > activity /list /sid 1
+  --------------------------------
+  # | Activities | Cost   | Payer 
+  --------------------------------
+  1 | Dinner     | $35.31 | Bob   
+  ================================
+  ```
+
+<br>     
   <br>
 
 <div class="button-box">
@@ -697,8 +819,17 @@ must pay and to whom they should pay for all debts to be resolved.<br>
 * Displays a session summary that summarises the [session that has been created](#creating-a-session-session-create)
   with session unique identifier of _1_ to help _Alice_ and _Bob_ calculate what transactions they have to make to
   resolve all their debts to each other.<br><br>
-  `session /summary /sid 1`<br><br>
-  ![Session summary command Screenshot](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/SessionSummaryCommand.png)
+  `session /summary /sid 1`<br>
+  ```
+  > session /summary /sid 1
+  Summary (Session Id #1) --
+  Name: Class gathering
+  Date: 16-03-2022
+  Transactions to be made:
+   - Alice has to pay Bob $17.66
+  ============================================================
+  ```
+
   <br>
   <br>
 
@@ -749,10 +880,27 @@ that involves the same group of individuals. This saves you time when entering t
 
 **Example**:
 - Adds a new group named _Uni Friends_, consisting of _Sally, Emily, David, Uriel, Natalie, Daniel, Nathan, Ethan_ and _Sam_.<br><br>
-  `group /create /n Uni Friends /pl Sally Emily David Uriel Natalie Daniel Nathan Ethan Sam` <br><br>
-  ![Group create command Screenshot](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/GroupCreateCommand.png)
-  <br>
-  <br>
+  `group /create /n Uni Friends /pl Sally Emily David Uriel Natalie Daniel Nathan Ethan Sam` <br>
+  ```
+  > group /create /n Uni Friends /pl Sally Emily David Uriel Natalie Daniel Nathan Ethan Sam
+  The group was created successfully.
+  Group Id #1  --
+  Name: Uni Friends
+  Participants:
+   1. Sally
+   2. Emily
+   3. David
+   4. Uriel
+   5. Natalie
+   6. Daniel
+   7. Nathan
+   8. Ethan
+   9. Sam
+  ============================================================
+  ```
+
+<br>
+<br>
 
 <div class="button-box">
   <a class="back-button" href="#group-management">Back to Group Management</a>
@@ -780,10 +928,14 @@ Deletes an existing group so that you can remove groups that you no longer need.
 
 **Example**:
 - Removes an existing group with a unique identifier of _1_.<br><br>
-  `group /delete /gid 1` <br><br>
-  ![Group delete command Screenshot](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/GroupDeleteCommand.png)
-  <br>
-  <br>
+  `group /delete /gid 1` <br>
+  ```
+  The group was deleted successfully.
+  ============================================================
+  ```
+
+<br>
+<br>
 
 <div class="button-box">
   <a class="back-button" href="#group-management">Back to Group Management</a>
@@ -829,15 +981,37 @@ delimiter is compulsory to identify the group you wish to edit.
 
 **Example 1**
 - Edits the group name to _Project Teammates_. <br><br>
-  `group /edit /gid 2 /n Project Teammates` <br><br>
-  ![Group Edit command Screenshot 1](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/GroupEditCommand[1].png)
+  `group /edit /gid 2 /n Project Teammates` <br>
+  ```
+  The group was edited successfully.
+  Group Id #2  --
+  Name: Project Teammates
+  Participants:
+   1. Alice
+   2. Bob
+   3. Charlie
+   4. David
+  ============================================================
+  ```
+  
+<br>
 
 **Example 2**
 - Edits the group to exclude _David_. <br><br>
-  `group /edit /gid 2 /pl Alice Bob Charlie` <br><br>
-  ![Group Edit command Screenshot 2](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/GroupEditCommand[2].png)
-  <br>
-  <br>
+  `group /edit /gid 2 /pl Alice Bob Charlie` <br>
+  ```
+  The group was edited successfully.
+  Group Id #2  --
+  Name: Project Teammates
+  Participants:
+   1. Alice
+   2. Bob
+   3. Charlie
+  ============================================================
+  ```
+  
+<br>
+<br>
 
 <div class="button-box">
   <a class="back-button" href="#group-management">Back to Group Management</a>
@@ -862,10 +1036,19 @@ Displays the details about an existing group so that you can review it.<br>
 
 **Example**:
 - Views an existing group with a unique identifier of _2_.<br><br>
-  `group /view /gid 2` <br><br>
-  ![Group view command Screenshot](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/GroupViewCommand.png)
-  <br>     
-  <br>
+  `group /view /gid 2` <br>
+  ```
+  Group Id #2  --
+  Name: Project Teammates
+  Participants:
+   1. Alice
+   2. Bob
+   3. Charlie
+  ============================================================
+  ```
+
+<br>     
+<br>
 
 <div class="button-box">
   <a class="back-button" href="#group-management">Back to Group Management</a>
@@ -883,10 +1066,18 @@ However, deleted groups are not listed.
 
 **Example**:
 - Lists all existing groups.<br><br>
-  `group /list`<br><br>
-  ![Group list command Screenshot](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/GroupListCommand.png)
-  <br>
-  <br>
+  `group /list`<br>
+  ```
+  List of Groups
+  -------------------------------------------
+  # | Name              | Number of persons 
+  -------------------------------------------
+  2 | Project Teammates | 3                 
+  ===========================================
+  ```
+  
+<br>
+<br>
 
 <div class="button-box">
   <a class="back-button" href="#group-management">Back to Group Management</a>
