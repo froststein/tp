@@ -170,7 +170,8 @@ Creates a session so that you can manage your group outings. <br>
       includes _Alice_, only two names, _Alice_ and _Bob_, would be saved.
 -->
 
-<span class = "notes box"><h5>💡 Notes:</h5>
+<div class = "notes box">
+<h5>💡 Notes:</h5>
 <ul>
   <li>The <code class="language-plaintext highlighter-rouge">[SESSION_NAME]</code> should be unique across all existing sessions.</li>
   <li>Each name in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> for a particular session should be unique.</li>
@@ -179,18 +180,19 @@ Creates a session so that you can manage your group outings. <br>
     <li>Example: <code class="language-plaintext highlighter-rouge">Alice Tan</code> is not allowed.</li>
   </ul>
 </ul>
-</span>
+</div>
 
 <br>
 
-<span class = "warning box"><h5>⚠️ Warning:</h5>
+<div class = "warning box">
+<h5>⚠️ Warning:</h5>
 <ul>
 <li>If you include a name of an individual in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> who already exists in the group specified by <code class="language-plaintext highlighter-rouge">[GROUP_ID]</code>, only one instance of this individual is stored in the session.</li>
   <ul>
     <li>Example: Where the group specified by <code class="language-plaintext highlighter-rouge">/gid</code> consists of _Alice_ and _Bob_ and the arguments of <code class="language-plaintext highlighter-rouge">/pl</code> includes _Alice_, only two names, _Alice_ and _Bob_, would be saved.</li>
   </ul>
 </ul>
-</span>
+</div>
 
 
 <br>
