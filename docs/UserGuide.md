@@ -172,14 +172,51 @@ Creates a session so that you can manage your group outings. <br>
 
 **Example 1** 
 * Adds a new session named _Class Outing_ involving _Alice_ and _Bob_ on _15-03-2022_.<br><br>
-  `session /create /n Class Outing /d 15-03-2022 /pl Alice Bob` <br><br>
+  <!--`session /create /n Class Outing /d 15-03-2022 /pl Alice Bob` <br>
   ![Session create command Screenshot 1](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/SessionCreateCommand[1].png)
+  -->
+  ```
+  > session /create /n Class outing /d 15-03-2022 /pl Alice Bob 
+  The session was created successfully.
+  Session Id #1 --
+  Name: Class outing
+  Date: 15-03-2022
+  Group: None
+  Participants:
+   1. Alice
+   2. Bob
+  The list of activities in the session is currently empty.
+  ============================================================
+  ```
 
 **Example 2** 
 * A [group has been created](#creating-a-group-group-create) with group named _Uni Friends_ with _Sally, Emily, David, Uriel, Natalie, Daniel, Nathan, Ethan_ and _Sam_. <br>
-  Adds a new session named _Class Gathering_ consisting of a group named _Uni Friends_ and _Alice_, on _16-04-2022_.<br><br>
-  `session /create /n Class Gathering /d 16-04-2022 /gid 1 /pl Alice` <br><br>
-  ![Session create command Screenshot 2](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/SessionCreateCommand[2].png)
+  Adds a new session named _Class Gathering_ consisting of a group named _Uni Friends_ and _Alice_, on _16-04-2022_.<br>
+  <!--`session /create /n Class Gathering /d 16-04-2022 /gid 1 /pl Alice` <br>
+  ![Session create command Screenshot 2](https://raw.githubusercontent.com/AY2122s2-cs2113t-t10-1/tp/master/docs/images/userguide/SessionCreateCommand[2].png)-->
+
+  ```
+  > session /create /n Class outing /d 15-03-2022 /pl Alice Bob 
+  The session was created successfully.
+  Session Id #4 --
+  Name: Class Gathering
+  Date: 16-04-2022
+  Group: Uni Friends
+  Participants:
+    1. Alice
+    2. Sally
+    3. Emily
+    4. David
+    5. Uriel
+    6. Natalie
+    7. Daniel
+    8. Nathan
+    9. Ethan
+    10. Sam
+  The list of activities in the session is currently empty.
+  ============================================================
+  ```
+  
   <br>
   <br>
 
