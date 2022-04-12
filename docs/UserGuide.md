@@ -543,6 +543,7 @@ There are 2 ways that you can specify the costs of an activity:
 * Adds a new activity to a session with a session unique identifier of _1_ named _High Tea_. Alice paid for both
   Bob and herself. Alice's meal cost _$20.50_ while Bob's meal cost _$13.50_.<br><br>
   `activity /create /sid 1 /n High Tea /p Alice /i Alice Bob /cl 20.50 13.50` <br>
+
   ```
   > activity /create /sid 1 /n High Tea /p Alice /i Alice Bob /cl 20.50 13.50
   The activity was created successfully.
@@ -595,6 +596,7 @@ Deletes an existing activity from a particular session so that you can remove ac
 **Example**:
 - Removes an existing activity with a unique identifier of _2_ from a session with a unique identifier of _1_. <br><br>
   `activity /delete /sid 1 /aid 2` <br>
+
   ```
   > activity /delete /sid 1 /aid 2
   The activity was deleted successfully.
@@ -685,6 +687,7 @@ distributed amongst all participants.
   with an activity unique identifier of _1_ in a session with a session unique identifier of _1_, leaving the list of
   participants unchanged. The activity is currently named _Class Lunch_ and involves _Alice_ and _Bob_.<br><br>
   `activity /edit /sid 1 /aid 1 /n Dinner /p Bob /i Alice Bob /co 30 /gst 7 /sc 10`<br>
+
   ```
   > activity /edit /sid 1 /aid 1 /n Dinner /p Bob /i Alice Bob /co 30 /gst 7 /sc 10
   The activity was edited successfully.
@@ -735,6 +738,7 @@ Displays the details about an existing activity so that you can review it.<br>
 **Example**
 - Views an existing activity with a unique identifier of _1_ in a session with a session unique identifier of _1_.<br><br>
   `activity /view /sid 1 /aid 1` <br>
+
   ```
   > activity /view /sid 1 /aid 1
   Session Id #1 | Activity Id #1 --
@@ -781,6 +785,7 @@ However, deleted activities are not listed.
 **Example**:
 - Lists all activities in a session with a unique identifier of _1_.<br><br>
   `activity /list /sid 1` <br>
+
   ```
   > activity /list /sid 1
   --------------------------------
@@ -828,6 +833,7 @@ must pay and to whom they should pay for all debts to be resolved.<br>
   with session unique identifier of _1_ to help _Alice_ and _Bob_ calculate what transactions they have to make to
   resolve all their debts to each other.<br><br>
   `session /summary /sid 1`<br>
+
   ```
   > session /summary /sid 1
   Summary (Session Id #1) --
@@ -938,6 +944,7 @@ Deletes an existing group so that you can remove groups that you no longer need.
 **Example**:
 - Removes an existing group with a unique identifier of _1_.<br><br>
   `group /delete /gid 1` <br>
+
   ```
   The group was deleted successfully.
   ============================================================
@@ -991,6 +998,7 @@ delimiter is compulsory to identify the group you wish to edit.
 **Example 1**
 - Edits the group name to _Project Teammates_. <br><br>
   `group /edit /gid 2 /n Project Teammates` <br>
+
   ```
   The group was edited successfully.
   Group Id #2  --
@@ -1008,6 +1016,7 @@ delimiter is compulsory to identify the group you wish to edit.
 **Example 2**
 - Edits the group to exclude _David_. <br><br>
   `group /edit /gid 2 /pl Alice Bob Charlie` <br>
+
   ```
   The group was edited successfully.
   Group Id #2  --
@@ -1046,6 +1055,7 @@ Displays the details about an existing group so that you can review it.<br>
 **Example**:
 - Views an existing group with a unique identifier of _2_.<br><br>
   `group /view /gid 2` <br>
+
   ```
   Group Id #2  --
   Name: Project Teammates
@@ -1076,6 +1086,7 @@ However, deleted groups are not listed.
 **Example**:
 - Lists all existing groups.<br><br>
   `group /list`<br>
+
   ```
   List of Groups
   -------------------------------------------
