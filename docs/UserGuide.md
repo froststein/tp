@@ -534,7 +534,6 @@ There are 2 ways that you can specify the costs of an activity:
   1 | Alice | $5.00     
   2 | Bob   | $5.00     
   =======================
-  > 
   ```
 
 <br>
