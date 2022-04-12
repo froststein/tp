@@ -175,7 +175,7 @@ Creates a session so that you can manage your group outings. <br>
 <ul>
 <li>If you include a name of an individual in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> who already exists in the group specified by <code class="language-plaintext highlighter-rouge">[GROUP_ID]</code>, only one instance of this individual is stored in the session.</li>
   <ul>
-    <li>Example: Where the group specified by <code class="language-plaintext highlighter-rouge">/gid</code> consists of _Alice_ and _Bob_ and the arguments of <code class="language-plaintext highlighter-rouge">/pl</code> includes _Alice_, only two names, _Alice_ and _Bob_, would be saved.</li>
+    <li>Example: Where the group specified by <code class="language-plaintext highlighter-rouge">/gid</code> consists of <em>Alice</em> and <em>Bob</em> and the arguments of <code class="language-plaintext highlighter-rouge">/pl</code> includes <em>Alice</em>, only two names, <em>Alice</em> and <em>Bob</em>, would be saved.</li>
   </ul>
 </ul>
 </div>
@@ -316,7 +316,7 @@ delimiter is compulsory to identify the session you wish to edit.
         <li>At least 1 field has to be edited for the command to run.</li>
         <li>More than 1 field can be edited in a single run of the command.</li>
       </ul>
-    <li>When editing the _list of participants_, existing participants, including those part of the group declared when creating the session, must be included.</li>
+    <li>When editing the <em>list of participants</em>, existing participants, including those part of the group declared when creating the session, must be included.</li>
     <ul>
         <li>Activities may have been created using participants in the list, hence the <em>list of participants</em>  can only expand and not shrink. This is to prevent introducing any inconsistencies to activities in the session.</li>
         <li>Example 1: If the session with session unique identifier of <em>1</em> has been created with <em>Alice</em>  and <em>Bob</em>  and you wish to edit it to include <em>Charlie</em> , a valid edit command would be: <br> <code class="language-plaintext highlighter-rouge">session /edit /sid 1 /pl Alice Bob Charlie</code>.</li>
