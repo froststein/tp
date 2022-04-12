@@ -186,6 +186,7 @@ Creates a session so that you can manage your group outings. <br>
 **Example 1** 
 * Adds a new session named _Class Outing_ involving _Alice_ and _Bob_ on _15-03-2022_.<br>
   `session /create /n Class Outing /d 15-03-2022 /pl Alice Bob` <br>
+
   ```
   > session /create /n Class outing /d 15-03-2022 /pl Alice Bob 
   The session was created successfully.
@@ -203,7 +204,8 @@ Creates a session so that you can manage your group outings. <br>
 **Example 2** 
 * A [group has been created](#creating-a-group-group-create) with group named _Uni Friends_ with _Sally, Emily, David, Uriel, Natalie, Daniel, Nathan, Ethan_ and _Sam_. <br>
   Adds a new session named _Class Gathering_ consisting of a group named _Uni Friends_ and _Alice_, on _16-04-2022_.<br>
-  `session /create /n Class Gathering /d 16-04-2022 /gid 1 /pl Alice`
+  `session /create /n Class Gathering /d 16-04-2022 /gid 1 /pl Alice` <br>
+
   ```
   > session /create /n Class Gathering /d 16-04-2022 /gid 1 /pl Alice
   The session was created successfully.
@@ -256,6 +258,7 @@ Deletes an existing session so that you can remove sessions that you no longer n
 **Example** 
 * Removes an existing session with a unique identifier of _2_.<br><br>
   `session /delete /sid 2` <br>
+
   ```
   > session /delete /sid 2
   The session was deleted successfully.
@@ -322,6 +325,7 @@ delimiter is compulsory to identify the session you wish to edit.
 **Example 1** 
 * Edits the name of the session to _Class gathering_ and the date to _16-03-2022_. <br><br>
   `session /edit /sid 1 /n Class gathering /d 16-03-2022` <br>
+
   ```
   > session /edit /sid 1 /n Class gathering /d 16-03-2022
   The session was edited successfully.
@@ -340,6 +344,7 @@ delimiter is compulsory to identify the session you wish to edit.
 **Example 2** 
 * Edits the session to include _Charlie_. <br><br>
   `session /edit /sid 1 /pl Alice Bob Charlie` <br>
+
   ```
   > session /edit /sid 1 /pl Alice Bob Charlie
   The session was edited successfully.
@@ -382,6 +387,7 @@ Displays the details of an existing session so that you can review it.<br>
 **Example**:
 * Views an existing session with a unique identifier of _1_.<br><br>
   `session /view /sid 1` <br>
+
   ```
   > session /view /sid 1
   Session Id #1 --
@@ -416,6 +422,7 @@ However, deleted sessions are not listed.
 **Example**
 * Lists all existing sessions. <br><br>
   `session /list`<br>
+
   ```
   > session /list
   List of Sessions
@@ -509,6 +516,7 @@ There are 2 ways that you can specify the costs of an activity:
 * Adds a new activity to a session with a session unique identifier of _1_ named _Class Lunch_. Alice paid a total of _$10_
   for both Bob and herself which is split equally amongst them.<br><br>
   `activity /create /sid 1 /n Class Lunch /p Alice /i Alice Bob /co 10` <br>
+
   ```
   > activity /create /sid 1 /n Class Lunch /p Alice /i Alice Bob /co 10
   The activity was created successfully.
@@ -881,6 +889,7 @@ that involves the same group of individuals. This saves you time when entering t
 **Example**:
 - Adds a new group named _Uni Friends_, consisting of _Sally, Emily, David, Uriel, Natalie, Daniel, Nathan, Ethan_ and _Sam_.<br><br>
   `group /create /n Uni Friends /pl Sally Emily David Uriel Natalie Daniel Nathan Ethan Sam` <br>
+
   ```
   > group /create /n Uni Friends /pl Sally Emily David Uriel Natalie Daniel Nathan Ethan Sam
   The group was created successfully.
