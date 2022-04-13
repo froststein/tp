@@ -65,20 +65,18 @@ If you can type fast, SplitLah can manage your outings faster than applications 
   <li>Examples: <code class="language-plaintext highlighter-rouge">help</code></li>
   </ul>
 <li>In each command:</li>
+<div class = "notes box">
+<strong>💡 Notes:</strong>
 <ul>
-  <div class = "notes box">
-  <strong>💡 Notes:</strong>
-  <ul>
-    <li>The points indicated under 💡 are <strong>important notes</strong> to be mindful of when using the command.</li>
-  </ul>
-  </div>
-  <div class = "warning box">
-  <strong>💡 Notes:</strong>
-  <ul>
-    <li>The points indicated under ⚠️ are **warnings** that you should pay attention to when using the command.</li>
-  </ul>
-  </div>
+  <li>The points indicated under 💡 are <strong>important notes</strong> to be mindful of when using the command.</li>
 </ul>
+</div>
+<div class = "warning box">
+<strong>💡 Notes:</strong>
+<ul>
+  <li>The points indicated under ⚠️ are **warnings** that you should pay attention to when using the command.</li>
+</ul>
+</div>
 <li>The button at the end of each section or subsection provides a hyperlink back to the table of contents that includes it. </li>
 </ul>
 
