@@ -963,10 +963,10 @@ that involves the same group of individuals. This saves you time when entering t
 
 **Example**:
 - Adds a new group named _Uni Friends_, consisting of _Sally, Emily, David, Uriel, Natalie, Daniel_ and _Nathan_.<br><br>
-  `group /create /n Uni Friends /pl Sally Emily David Uriel Natalie Daniel Nathan Ethan Sam` <br>
+  `group /create /n Uni Friends /pl Sally Emily David Uriel Natalie Daniel Nathan` <br>
 
   ```
-  > group /create /n Uni Friends /pl Sally Emily David Uriel Natalie Daniel Nathan Ethan Sam
+  > group /create /n Uni Friends /pl Sally Emily David Uriel Natalie Daniel Nathan
   The group was created successfully.
   Group Id #1  --
   Name: Uni Friends
