@@ -78,10 +78,9 @@ If you can type fast, SplitLah can manage your outings faster than applications 
 </ul>
 </div>
 <li>The button at the end of each section or subsection provides a hyperlink back to the table of contents that includes it.</li>
-<ul>
+<ul style="margin-top:1rem;">
   <li>Example: <a class="back-button">Back to Contents</a></li>
 </ul>
-<li>The &nbsp; <a class="back-button">button</a> &nbsp; at the end of each section or subsection provides a hyperlink back to the table of contents that includes it. </li>
 </ul>
 
 <br>
