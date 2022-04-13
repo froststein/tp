@@ -220,7 +220,7 @@ Creates a session so that you can manage your group outings. <br>
 <br>
 
 **Example 2** 
-* A [group has been created](#creating-a-group-group-create) with group named _Uni Friends_ with _Sally, Emily, David, Uriel, Natalie, Daniel, Nathan, Ethan_ and _Sam_. <br>
+* A [group has been created](#creating-a-group-group-create) with group named _Uni Friends_ with _Sally, Emily, David, Uriel, Natalie, Daniel_ and _Nathan_. <br>
   Adds a new session named _Class Gathering_ consisting of _Alice_ and a group named _Uni Friends_, on _16-04-2022_.<br>
   `session /create /n Class Gathering /d 16-04-2022 /gid 1 /pl Alice` <br>
 
@@ -240,8 +240,6 @@ Creates a session so that you can manage your group outings. <br>
     6. Natalie
     7. Daniel
     8. Nathan
-    9. Ethan
-    10. Sam
   The list of activities in the session is currently empty.
   ============================================================
   ```
@@ -422,7 +420,7 @@ Displays the details of an existing session so that you can review it.<br>
 <br>
 
 **Example**:
-* Views an existing session with a unique identifier of _1_.<br><br>
+* Views an existing session with a unique identifier of _1_. <br><br>
   `session /view /sid 1` <br>
 
   ```
@@ -439,7 +437,7 @@ Displays the details of an existing session so that you can review it.<br>
   ============================================================
   ```
 
-  <br>     
+  <br>
   <br>
 
 <div class="button-box">
@@ -964,7 +962,7 @@ that involves the same group of individuals. This saves you time when entering t
 <br>
 
 **Example**:
-- Adds a new group named _Uni Friends_, consisting of _Sally, Emily, David, Uriel, Natalie, Daniel, Nathan, Ethan_ and _Sam_.<br><br>
+- Adds a new group named _Uni Friends_, consisting of _Sally, Emily, David, Uriel, Natalie, Daniel_ and _Nathan_.<br><br>
   `group /create /n Uni Friends /pl Sally Emily David Uriel Natalie Daniel Nathan Ethan Sam` <br>
 
   ```
@@ -980,8 +978,6 @@ that involves the same group of individuals. This saves you time when entering t
    5. Natalie
    6. Daniel
    7. Nathan
-   8. Ethan
-   9. Sam
   ============================================================
   ```
 
