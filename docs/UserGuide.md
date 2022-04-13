@@ -201,9 +201,11 @@ Creates a session so that you can manage your group outings. <br>
   ============================================================
   ```
 
+<br>
+
 **Example 2** 
 * A [group has been created](#creating-a-group-group-create) with group named _Uni Friends_ with _Sally, Emily, David, Uriel, Natalie, Daniel, Nathan, Ethan_ and _Sam_. <br>
-  Adds a new session named _Class Gathering_ consisting of a group named _Uni Friends_ and _Alice_, on _16-04-2022_.<br>
+  Adds a new session named _Class Gathering_ consisting of _Alice_ and a group named _Uni Friends_, on _16-04-2022_.<br>
   `session /create /n Class Gathering /d 16-04-2022 /gid 1 /pl Alice` <br>
 
   ```
@@ -967,6 +969,7 @@ Deletes an existing group so that you can remove groups that you no longer need.
   `group /delete /gid 1` <br>
 
   ```
+  > group /delete /gid 1
   The group was deleted successfully.
   ============================================================
   ```
@@ -1021,6 +1024,7 @@ delimiter is compulsory to identify the group you wish to edit.
   `group /edit /gid 2 /n Project Teammates` <br>
 
   ```
+  > group /edit /gid 2 /n Project Teammates
   The group was edited successfully.
   Group Id #2  --
   Name: Project Teammates
@@ -1039,6 +1043,7 @@ delimiter is compulsory to identify the group you wish to edit.
   `group /edit /gid 2 /pl Alice Bob Charlie` <br>
 
   ```
+  > group /edit /gid 2 /pl Alice Bob Charlie
   The group was edited successfully.
   Group Id #2  --
   Name: Project Teammates
@@ -1078,6 +1083,7 @@ Displays the details about an existing group so that you can review it.<br>
   `group /view /gid 2` <br>
 
   ```
+  > group /view /gid 2
   Group Id #2  --
   Name: Project Teammates
   Participants:
@@ -1109,6 +1115,7 @@ However, deleted groups are not listed.
   `group /list`<br>
 
   ```
+  > group /list
   List of Groups
   -------------------------------------------
   # | Name              | Number of persons 
