@@ -140,7 +140,7 @@ If you can type fast, SplitLah can manage your outings faster than applications 
 
 ## Features 
 
-## Session Management
+## _Session Management_
 
 > A session represents a group outing that involves a list of participants and 
 > spans an arbitrary period of time containing activities.
