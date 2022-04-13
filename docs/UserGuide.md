@@ -74,10 +74,10 @@ If you can type fast, SplitLah can manage your outings faster than applications 
 <div class = "warning box">
 <strong>💡 Notes:</strong>
 <ul>
-  <li>The points indicated under ⚠️ are **warnings** that you should pay attention to when using the command.</li>
+  <li>The points indicated under ⚠️ are <strong>warnings</strong> that you should pay attention to when using the command.</li>
 </ul>
 </div>
-<li>The button at the end of each section or subsection provides a hyperlink back to the table of contents that includes it. </li>
+<li>The <a class="back-button">button</a> at the end of each section or subsection provides a hyperlink back to the table of contents that includes it. </li>
 </ul>
 
 <br>
