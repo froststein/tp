@@ -199,8 +199,6 @@ Creates a session so that you can manage your group outings. <br>
 </ul>
 </div>
 
-<br>
-
 <div class = "warning box">
 <strong>⚠️ Warning:</strong>
 <ul>
@@ -210,7 +208,6 @@ Creates a session so that you can manage your group outings. <br>
   </ul>
 </ul>
 </div>
-
 
 <br>
 
@@ -286,8 +283,6 @@ Deletes an existing session so that you can remove sessions that you no longer n
   </ul>
 </div>
 
-<br>
-
 <div class = "warning box">
 <strong>⚠️ Warning:</strong>
 <ul>
@@ -358,8 +353,6 @@ delimiter is compulsory to identify the session you wish to edit.
       </ul>
   </ul>
 </div>
-
-<br>
 
 <div class = "warning box">
 <strong>⚠️ Warning:</strong>
@@ -649,8 +642,6 @@ Deletes an existing activity from a particular session so that you can remove ac
   </ul>
 </div>
 
-<br>
-
 <div class = "warning box">
 <strong>⚠️ Warning:</strong>
 <ul>
@@ -746,8 +737,6 @@ distributed amongst all participants.
     <li>All values displayed are rounded off to 2 decimal places. This may result in slight inaccuracies.</li>
   </ul>
 </div>
-
-<br>
 
 <div class = "warning box">
 <strong>⚠️ Warning:</strong>
@@ -1034,8 +1023,6 @@ Deletes an existing group so that you can remove groups that you no longer need.
   </ul>
 </div>
 
-<br>
-
 <div class = "warning box">
 <strong>⚠️ Warning:</strong>
 <ul>
@@ -1101,8 +1088,6 @@ delimiter is compulsory to identify the group you wish to edit.
     </ul>
   </ul>
 </div>
-
-<br>
 
 <div class = "warning box">
 <strong>⚠️ Warning:</strong>
