@@ -66,22 +66,18 @@ If you can type fast, SplitLah can manage your outings faster than applications 
   </ul>
 <li>In each command:</li>
 <ul>
-<li>
   <div class = "notes box">
   <strong>💡 Notes:</strong>
   <ul>
     <li>The points indicated under 💡 are <strong>important notes</strong> to be mindful of when using the command.</li>
   </ul>
   </div>
-</li>
-<li>
   <div class = "warning box">
   <strong>💡 Notes:</strong>
   <ul>
     <li>The points indicated under ⚠️ are **warnings** that you should pay attention to when using the command.</li>
   </ul>
   </div>
-</li>
 </ul>
 <li>The button at the end of each section or subsection provides a hyperlink back to the table of contents that includes it. </li>
 </ul>
