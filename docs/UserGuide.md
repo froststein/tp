@@ -54,6 +54,40 @@ If you can type fast, SplitLah can manage your outings faster than applications 
   - The points indicated under ⚠️ are **warnings** that you should pay attention to when using the command.
 - The button at the end of each section or subsection provides a hyperlink back to the table of contents that includes it. 
 
+<br>
+<h2>How to use this user guide</h2>
+<ul>
+<li>Each feature that SplitLah supports is known as a command.</li>
+<li>These commands are divided into five sections: <a href="#session-management">Session Management</a>, <a href="#activity-management">Activity Management</a>, <a href="#transaction-management">Transaction Management</a>, <a href="#group-management">Group Management</a> and <a href="#miscellaneous">Miscellaneous</a>.</li>
+<li>Each command has its own section in this guide explaining them in greater detail.</li>
+<li>The format for each command is enclosed within a <code class="language-plaintext highlighter-rouge">code block</code>, so that they can be copied directly into SplitLah if needed.</li>
+  <ul>
+  <li>Examples: <code class="language-plaintext highlighter-rouge">help</code></li>
+  </ul>
+<li>In each command:</li>
+<ul>
+<li>
+  <div class = "notes box">
+  <strong>💡 Notes:</strong>
+  <ul>
+    <li>The points indicated under 💡 are <strong>important notes</strong> to be mindful of when using the command.</li>
+  </ul>
+  </div>
+</li>
+<li>
+  <div class = "warning box">
+  <strong>💡 Notes:</strong>
+  <ul>
+    <li>The points indicated under ⚠️ are **warnings** that you should pay attention to when using the command.</li>
+  </ul>
+  </div>
+</li>
+</ul>
+<li>The button at the end of each section or subsection provides a hyperlink back to the table of contents that includes it. </li>
+</ul>
+
+<br>
+
 ## Quick Notes
 - Allowed characters for values:
   - Names of `Sessions`,`Activities` and `Groups` can have all printable [ASCII](https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html) characters.
@@ -1254,7 +1288,7 @@ Stay tuned to future updates from us!
 
 ## Command Summary
 
-| Action                                           | Format                                                                                                                                                                                                                                                                              |
+| Action                                           | Format                  LMAO                                                                                                                                                                                                                                                        |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Create a new session                             | Format: `session /create /n [SESSION_NAME] /d [SESSION_DATE] {/pl [NAME1 NAME2 ...] /gid [GROUP_ID]}`<br><br> Example: `session /create /n Outing /d 15-03-2022 /pl Alice Bob Charlie`                                                                                              |
 | Delete an existing session                       | Format: `session /delete /sid [SESSION_ID]`<br><br>Example: `session /delete /sid 1`                                                                                                                                                                                                |
