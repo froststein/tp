@@ -42,7 +42,6 @@ If you can type fast, SplitLah can manage your outings faster than applications 
 
 <hr>
 
-<br>
 <h2>How to use this user guide</h2>
 <ul>
 <li>Each feature that SplitLah supports is known as a command.</li>
