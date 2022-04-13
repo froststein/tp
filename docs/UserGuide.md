@@ -307,7 +307,8 @@ delimiter is compulsory to identify the session you wish to edit.
 <div class = "notes box">
 <strong>💡 Notes:</strong>
   <ul>
-    <li>A session with a unique identifier of <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code> has to exist before it can be edited. The <code class="language-plaintext highlighter-rouge">[SESSION_NAME]</code> should be unique across all existing sessions.</li>
+    <li>A session with a unique identifier of <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code> has to exist before it can be edited. </li>
+    <li>The <code class="language-plaintext highlighter-rouge">[SESSION_NAME]</code> should be unique across all existing sessions.</li>
     <li>Each name in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> for a particular session should be unique.</li>
     <li>The names in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> must only be a single word without whitespaces.</li>
       <ul>
@@ -402,7 +403,7 @@ Displays the details of an existing session so that you can review it.<br>
 <div class = "notes box">
 <strong>💡 Notes:</strong>
   <ul>
-    <li>The session with a unique identifier of  <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code> has to exist before the session can be viewed.</li>
+    <li>The session with a unique identifier of <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code> has to exist before the session can be viewed.</li>
   </ul>
 </div>
 
@@ -512,23 +513,25 @@ There are 2 ways that you can specify the costs of an activity:
 
 <br>
 
-> **💡 Notes:**
->* A session with a unique identifier of `[SESSION_ID]` has to exist before an activity can be created and assigned to 
->  it.
->* Each name in `[NAME1 NAME2 ...]` for the activity should be unique.
->* The names in `[PAYER]` and `[NAME1 NAME2 ...]` must also be associated with the session referenced by
->  `[SESSION_ID]`.
->* The names in `[PAYER]` and `[NAME1 NAME2 ...]` must only be a single word without whitespaces.
->   * Example: `Alice Tan` is not allowed.
->* The values in `[TOTAL_COST]` and `[COST1 COST2 ...]` are decimal values with a maximum of 12 digits before
->  and 2 digits after the decimal point, if any.
->* The values in `[GST_PERCENTAGE]` and `[SERVICE_CHARGE]` are decimal values that range from 0 to 100,
->  with a maximum of 3 digits before and 2 after the decimal point, if any.
->* If the payer is also involved in the activity, the payer's name has to be included in the list of participants
->   * Example: _Alice_ paid for a movie which she watched with _Bob_ in a session with a session unique identifier of _1_,
->    costing a total of _$20_. The correct command format is: <br>
->    `activity /create /sid 1 /n movie /p Alice /i Alice Bob /co 20`
->* All values displayed are rounded off to 2 decimal places. This may result in slight inaccuracies.
+<div class = "notes box">
+<strong>💡 Notes:</strong>
+  <ul>
+    <li>A session with a unique identifier of <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code> has to exist before an activity can be created and assigned to it.</li>
+    <li>Each name in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> for the activity should be unique.</li>
+    <li>The names in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> must also be associated with the session referenced by <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code>.</li>
+    <li>The names in <code class="language-plaintext highlighter-rouge">[PAYER]</code> and <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> must only be a single word without whitespaces.</li>
+      <ul>
+        <li>Example: <code class="language-plaintext highlighter-rouge">Alice Tan</code> is not allowed.</li>
+      </ul>
+    <li>The values in <code class="language-plaintext highlighter-rouge">[TOTAL_COST]</code> and <code class="language-plaintext highlighter-rouge">[COST1 COST2 ...]</code> are decimal values with a maximum of 12 digits before and 2 digits after the decimal point, if any.</li>
+    <li>The values in <code class="language-plaintext highlighter-rouge">[GST_PERCENTAGE]</code> and <code class="language-plaintext highlighter-rouge">[SERVICE_CHARGE]</code> are decimal values that range from 0 to 100, with a maximum of 3 digits before and 2 after the decimal point, if any.</li>
+    <li>If the payer is also involved in the activity, the payer's name has to be included in the list of participants</li>
+    <ul>
+        <li>Example: <em>Alice</em> paid for a movie which she watched with <em>Bob</em> in a session with a session unique identifier of <em>1</em>, costing a total of <em>$20</em>. The correct command format is: <br> <code class="language-plaintext highlighter-rouge">activity /create /sid 1 /n movie /p Alice /i Alice Bob /co 20</code></li>
+    </ul>
+    <li>All values displayed are rounded off to 2 decimal places. This may result in slight inaccuracies.</li>
+  </ul>
+</div>
 
 <br>
 
@@ -607,12 +610,22 @@ Deletes an existing activity from a particular session so that you can remove ac
 
 <br>
 
-> **💡 Notes:**
->- A session with a unique identifier of `[SESSION_ID]` has to exist before an activity in that session can be removed.
->- An activity with a unique identifier of `[ACTIVITY_ID]` has to exist before it can be removed.
->
-> **⚠️ Warning:**
->- This action is irreversible. The activity is deleted immediately after entering this command.
+<div class = "notes box">
+<strong>💡 Notes:</strong>
+  <ul>
+    <li>A session with a unique identifier of <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code> has to exist before an activity in that session can be removed.</li>
+    <li>An activity with a unique identifier of <code class="language-plaintext highlighter-rouge">[ACTIVITY_ID]</code> has to exist before it can be removed.</li>  
+  </ul>
+</div>
+
+<br>
+
+<div class = "warning box">
+<strong>⚠️ Warning:</strong>
+<ul>
+  <li>This action is irreversible. The activity is deleted immediately after entering this command.</li>
+</ul>
+</div>
 
 <br>
 
@@ -686,22 +699,31 @@ distributed amongst all participants.
 
 <br>
 
-> **💡 Notes:**
->- An activity with a unique identifier of `[ACTIVITY_ID]` has to exist before it can be edited.
->- A session with a unique identifier of `[SESSION_ID]` has to exist before activities in it can be edited.
->- Each name in `[NAME1 NAME2 ...]` for the activity should be unique.
->- The names in `[PERSON_PAID]` and `[NAME1 NAME2 ...]` must also be associated with the session referenced by
-   `[SESSION_ID]`.
->* The names in `[PAYER]` and `[NAME1 NAME2 ...]` must only be a single word without whitespaces.
->   - Example: `Alice Tan` is not allowed.
->* The values in `[TOTAL_COST]` and `[COST1 COST2 ...]` are decimal values with a maximum of 12 digits before
-   and 2 digits after the decimal point, if any.
->* The values in `[GST_PERCENTAGE]` and `[SERVICE_CHARGE]` are decimal values that can only range from 0 to 100,
-   with a maximum of 3 digits before and 2 after the decimal point, if any.
->* All values displayed are rounded off to 2 decimal places. This may result in slight inaccuracies.
->
-> **⚠️ Warning:**
->* This action is irreversible. The activity is edited immediately after entering this command.
+<div class = "notes box">
+<strong>💡 Notes:</strong>
+  <ul>
+    <li>An activity with a unique identifier of <code class="language-plaintext highlighter-rouge">[ACTIVITY_ID]</code> has to exist before it can be edited.</li>
+    <li>A session with a unique identifier of <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code> has to exist before activities in it can be edited.</li>
+    <li>Each name in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> for the activity should be unique.</li>
+    <li>The names in <code class="language-plaintext highlighter-rouge">[PAYER]</code> and <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> must also be associated with the session referenced by <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code>.</li>
+    <li>The names in <code class="language-plaintext highlighter-rouge">[PAYER]</code> and <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> must only be a single word without whitespaces.</li>
+      <ul>
+        <li>Example: <code class="language-plaintext highlighter-rouge">Alice Tan</code> is not allowed.</li>
+      </ul>
+    <li>The values in <code class="language-plaintext highlighter-rouge">[TOTAL_COST]</code> and <code class="language-plaintext highlighter-rouge">[COST1 COST2 ...]</code> are decimal values with a maximum of 12 digits before and 2 digits after the decimal point, if any.</li>
+    <li>The values in <code class="language-plaintext highlighter-rouge">[GST_PERCENTAGE]</code> and <code class="language-plaintext highlighter-rouge">[SERVICE_CHARGE]</code> are decimal values that range from 0 to 100, with a maximum of 3 digits before and 2 after the decimal point, if any.</li>
+    <li>All values displayed are rounded off to 2 decimal places. This may result in slight inaccuracies.</li>
+  </ul>
+</div>
+
+<br>
+
+<div class = "warning box">
+<strong>⚠️ Warning:</strong>
+<ul>
+  <li>This action is irreversible. The activity is edited immediately after entering this command.</li>
+</ul>
+</div>
 
 <br>
 
@@ -751,10 +773,14 @@ Displays the details about an existing activity so that you can review it.<br>
 
 <br>
 
-> **💡 Notes:**
->- A session with a unique identifier of `[SESSION_ID]` has to exist before an activity in that session can be viewed.
->- An activity with a unique identifier of `[ACTIVITY_ID]` has to exist before it can be viewed.
->- All values displayed are rounded off to 2 decimal places. This may result in slight inaccuracies.
+<div class = "notes box">
+<strong>💡 Notes:</strong>
+  <ul>
+    <li>A session with a unique identifier of <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code> has to exist before an activity in that session can be viewed.</li>
+    <li>An activity with a unique identifier of <code class="language-plaintext highlighter-rouge">[ACTIVITY_ID]</code> has to exist before it can be viewed.</li>  
+    <li>All values displayed are rounded off to 2 decimal places. This may result in slight inaccuracies.</li>
+  </ul>
+</div>
 
 <br>
 
@@ -800,8 +826,12 @@ However, deleted activities are not listed.
 
 <br>
 
-> **💡 Note:**
->- A session with a unique identifier of `[SESSION_ID]` has to exist before its activities can be listed.
+<div class = "notes box">
+<strong>💡 Notes:</strong>
+  <ul>
+    <li>A session with a unique identifier of <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code> has to exist before its activities can be listed.</li>
+  </ul>
+</div>
 
 <br>
 
@@ -840,14 +870,18 @@ must pay and to whom they should pay for all debts to be resolved.<br>
 
 <br>
 
-> **💡 Notes:**
->* A session with a unique identifier of `[SESSION_ID]` has to exist before its summary can be generated.
->* All values displayed are rounded off to 2 decimal places. This may result in slight inaccuracies.
->* SplitLah simplifies transactions to minimise the number of transactions you have to make.
->   * Example: In the same session, _Alice_ paid for _Bob_'s lunch which costs _$10_ and _Bob_ paid for _Charlie_'s
->     movie ticket which costs _$10_. 
->   * Instead of having _Bob_ pay _Alice_ _$10_ and _Charlie_ pay _Bob_ _$10_, SplitLah simplifies this
->     so _Charlie_ just has to pay _$10_ directly to _Alice_, settling all debts in a single transaction.
+<div class = "notes box">
+<strong>💡 Notes:</strong>
+  <ul>
+    <li>A session with a unique identifier of <code class="language-plaintext highlighter-rouge">[SESSION_ID]</code> has to exist before its summary can be generated.</li>
+    <li>All values displayed are rounded off to 2 decimal places. This may result in slight inaccuracies.</li>
+    <li>SplitLah simplifies transactions to minimise the number of transactions you have to make.</li>
+    <ul>
+      <li>Example: In the same session, <em>Alice</em> paid for <em>Bob</em>'s lunch which costs <em>$10</em> and <em>Bob</em> paid for <em>Charlie</em>'s movie ticket which costs <em>$10</em>. </li>    
+      <li>Instead of having <em>Bob</em> pay <em>Alice</em> <em>$10</em> and <em>Charlie</em> pay <em>Bob</em> <em>$10</em>, SplitLah simplifies this so <em>Charlie</em> just has to pay <em>$10</em> directly to <em>Alice</em>, settling all debts in a single transaction.</li>
+    </ul>
+  </ul>
+</div>
 
 <br>
 
@@ -907,11 +941,17 @@ that involves the same group of individuals. This saves you time when entering t
 
 <br>
 
-> **💡 Notes:**
->* The `[GROUP_NAME]` should be unique across all existing groups.
->* Each name in `[NAME1 NAME2 ...]` for a particular group should be unique.
->* The names in `[NAME1 NAME2 ...]` must only be a single word without whitespaces.
->   * Example: `Alice Tan` is not allowed.
+<div class = "notes box">
+<strong>💡 Notes:</strong>
+  <ul>
+    <li>The <code class="language-plaintext highlighter-rouge">[GROUP_NAME]</code> should be unique across all existing groups.</li>
+    <li>Each name in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> for a particular group should be unique.</li>
+    <li>The names in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> must only be a single word without whitespaces.</li>
+    <ul>
+      <li>Example: <code class="language-plaintext highlighter-rouge">Alice Tan</code> is not allowed.</li>
+    </ul>
+  </ul>
+</div>
 
 <br>
 
@@ -956,11 +996,21 @@ Deletes an existing group so that you can remove groups that you no longer need.
 
 <br>
 
-> **💡 Note:**
->- A group with a unique identifier of `[GROUP_ID]` has to exist before it can be removed.
->
-> **⚠️ Warning:**
-> - This action is irreversible. The group is deleted immediately after entering this command.
+<div class = "notes box">
+<strong>💡 Notes:</strong>
+  <ul>
+    <li>A group with a unique identifier of <code class="language-plaintext highlighter-rouge">[GROUP_ID]</code> has to exist before it can be removed.</li>
+  </ul>
+</div>
+
+<br>
+
+<div class = "warning box">
+<strong>⚠️ Warning:</strong>
+<ul>
+  <li>This action is irreversible. The group is deleted immediately after entering this command.</li>
+</ul>
+</div>
 
 <br>
 
@@ -999,19 +1049,36 @@ delimiter is compulsory to identify the group you wish to edit.
 
 <br>
 
-> **💡 Notes:**
->- A group with a unique identifier of `[GROUP_ID]` has to exist before it can be edited.
->- The `[GROUP_NAME]` should be unique across all existing groups.
->- Each name in `[NAME1 NAME2 ...]` for a particular group should be unique.
->- There are 2 editable fields: _group name_ and the _list of individuals_ in the group.
->   - At least 1 field has to be edited for the command to run.
->   - More than 1 field can be edited in a single run of the command.
->- Editing groups **does not** affect sessions.
->   - If a session has been created with the group that you are editing,
->     editing the group **does not modify** the _list of participants_ in the session.
->
-> **⚠️ Warning:**
-> - This action is irreversible. The group is edited immediately after entering this command.
+<div class = "notes box">
+<strong>💡 Notes:</strong>
+  <ul>
+    <li>A group with a unique identifier of <code class="language-plaintext highlighter-rouge">[GROUP_ID]</code> has to exist before it can be edited. </li>
+    <li>The <code class="language-plaintext highlighter-rouge">[GROUP_NAME]</code> should be unique across all existing groups.</li>
+    <li>Each name in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> for a particular group should be unique.</li>
+    <li>The names in <code class="language-plaintext highlighter-rouge">[NAME1 NAME2 ...]</code> must only be a single word without whitespaces.</li>
+      <ul>
+        <li>Example: <code class="language-plaintext highlighter-rouge">Alice Tan</code> is not allowed.</li>
+      </ul>
+    <li>There are 3 editable fields: <em>group name</em> and the <em>list of individuals</em> in the group.</li>
+      <ul>
+        <li>At least 1 field has to be edited for the command to run.</li>
+        <li>More than 1 field can be edited in a single run of the command.</li>
+      </ul>
+    <li>Editing groups <strong>does not</strong> affect sessions.</li>
+    <ul>
+        <li>If a session has been created with the group that you are editing, editing the group <strong>does not modify</strong> the <em>list of participants</em> in the session.</li>
+    </ul>
+  </ul>
+</div>
+
+<br>
+
+<div class = "warning box">
+<strong>⚠️ Warning:</strong>
+<ul>
+  <li>This action is irreversible. The group is edited immediately after entering this command.</li>
+</ul>
+</div>
 
 <br>
 
@@ -1073,8 +1140,12 @@ Displays the details about an existing group so that you can review it.<br>
 
 <br>
 
-> **💡 Note:**
->- The group with a unique identifier of `[GROUP_ID]` has to exist before the group can be viewed.
+<div class = "notes box">
+<strong>💡 Notes:</strong>
+  <ul>
+    <li>The group with a unique identifier of <code class="language-plaintext highlighter-rouge">[GROUP_ID]</code> has to exist before the group can be viewed.</li>
+  </ul>
+</div>
 
 <br>
 
