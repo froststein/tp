@@ -42,7 +42,8 @@ If you can type fast, SplitLah can manage your outings faster than applications 
 
 <hr>
 
-<h2>How to use this user guide</h2>
+## How to use this user guide
+
 <ul>
 <li>Each feature that SplitLah supports is known as a command.</li>
 <li>These commands are divided into five sections: <a href="#session-management">Session Management</a>, <a href="#activity-management">Activity Management</a>, <a href="#transaction-management">Transaction Management</a>, <a href="#group-management">Group Management</a> and <a href="#miscellaneous">Miscellaneous</a>.</li>
