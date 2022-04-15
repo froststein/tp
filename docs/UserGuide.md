@@ -251,7 +251,7 @@ Creates a session so that you can manage your group outings. <br>
   The list of activities in the session is currently empty.
   ============================================================
   ```
-  
+
   <br>
   <br>
 
@@ -606,7 +606,7 @@ There are 2 ways that you can specify the costs of an activity:
   2 | Bob   | $13.50    
   =======================
   ```
-  
+
   <br>
   <br>
 
@@ -655,8 +655,8 @@ Deletes an existing activity from a particular session so that you can remove ac
   ============================================================
   ```
 
-<br>
-<br>
+  <br>
+  <br>
 
 <div class="button-box">
   <a class="back-button" href="#activity-management">Back to Activity Management</a>
@@ -819,8 +819,8 @@ Displays the details about an existing activity so that you can review it.<br>
   2 | Bob   | $17.66    
   =======================
   ```
-  
-  <br>     
+
+  <br>
   <br>
 
 <div class="button-box">
@@ -862,7 +862,7 @@ However, deleted activities are not listed.
   ================================
   ```
 
-<br>     
+  <br>
   <br>
 
 <div class="button-box">
@@ -989,8 +989,8 @@ that involves the same group of individuals. This saves you time when entering t
   ============================================================
   ```
 
-<br>
-<br>
+  <br>
+  <br>
 
 <div class="button-box">
   <a class="back-button" href="#group-management">Back to Group Management</a>
@@ -1034,8 +1034,8 @@ Deletes an existing group so that you can remove groups that you no longer need.
   ============================================================
   ```
 
-<br>
-<br>
+  <br>
+  <br>
 
 <div class="button-box">
   <a class="back-button" href="#group-management">Back to Group Management</a>
@@ -1128,9 +1128,9 @@ delimiter is compulsory to identify the group you wish to edit.
    3. Charlie
   ============================================================
   ```
-  
-<br>
-<br>
+
+  <br>
+  <br>
 
 <div class="button-box">
   <a class="back-button" href="#group-management">Back to Group Management</a>
@@ -1172,8 +1172,8 @@ Displays the details about an existing group so that you can review it.<br>
   ============================================================
   ```
 
-<br>     
-<br>
+  <br>
+  <br>
 
 <div class="button-box">
   <a class="back-button" href="#group-management">Back to Group Management</a>
@@ -1202,9 +1202,9 @@ However, deleted groups are not listed.
   2 | Project Teammates | 3                 
   ===========================================
   ```
-  
-<br>
-<br>
+
+  <br>
+  <br>
 
 <div class="button-box">
   <a class="back-button" href="#group-management">Back to Group Management</a>
